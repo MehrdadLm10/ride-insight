@@ -176,12 +176,8 @@ def infer_dates(rides,anchor):
     return rides
 
 def destination_group(text):
-    s=norm(text)
-    if ('آرژانتین' in s and 'شانزده' in s) or ('ساعی' in s and 'شانزدهم بعد از سام' in s):
-        return 'آرژانتین / ساعی، شانزدهم'
-    if 'جنت' in s and 'بهمنی' in s: return 'جنت آباد، محدوده بهمنی نژاد'
-    if 'تهرانپارس' in s and ('مهدوی' in s or 'مظفری' in s): return 'تهرانپارس، مهدوی زفرقندی / مظفری'
-    return re.sub(r'\s+',' ',s).strip(' ،') or 'مقصد نامشخص'
+    s = norm(text)
+    return re.sub(r'\s+', ' ', s).strip(' ،') or 'مقصد نامشخص'
 
 def stats(rides):
     valid=[r for r in rides if not r.status and r.amount is not None]
