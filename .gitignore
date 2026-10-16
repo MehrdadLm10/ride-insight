@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build
+build/
+dist/
+*.spec
+installer_output/
+
+# Personal exports
+exports/
+*.xlsx
+*.xls
+*.csv
+*.json
+
+# Credentials and browser profiles
+.env
+.env.*
+!.env.example
+chrome_profile/
+browser_profile/
+user_data/
+
+# Local files
+*.log
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
